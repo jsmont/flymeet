@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+     <link rel="stylesheet" href="EventList.css">
+     <link href='https://fonts.googleapis.com/css?family=Crete+Round' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+  <script src="EventList.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div id="logo">
+        Flymeet
+    </div>
+    <div class="col-md-2" id="event_list" >
+        <div class="row" >
+<!--
+            <div class="event active">
+                <div class="event_row col-md-8">Event <label class="empty_full">&#9898</label></div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event <label class="empty_full">&#9899</label></div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+            <div class="event">
+                <div class="event_row col-md-8">Event</div>
+                <div class="col-md-4" style="text-align:right;">date</div>
+            </div>
+-->
+        </div>
+    </div>
+    <div class="col-md-10 no-padding" id="main">
+        <div class="headed event_name">
+            Event list
+        </div>
+        <div class="col-md-6 col-md-offset-3"  style="background-color: #0D0D0D; height: 3px;"></div>
+        <div class="date col-md-12">00/00/00</div>
+        <div class="col-md-12">
+            <div class="col-md-6 assistant_list">
+                <div class="list col-md-8 no-padding col-md-offset-2">
+                    <!--
+                    <div class="assistant active">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="mrpurr.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        
+                        <div class="col-md-5 data1" style="text-align:left;">Name <label class="yes_no">&#10004</label></div>
+                      <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="grumpy.jpeg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name <label class="yes_no">&#10008</label></div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="softie.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="bosscat.png" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="mewbedo.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="mewster.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                       <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="sircat.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="gumball.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="siriuscat.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+                    <div class="assistant">
+                        <div class="col-md-3 no-padding profile_pic_container">
+                            <img src="baow.jpg" class="profile_pic" width="75px" height="75px">
+                        </div>
+                        <div class="col-md-5 data1" style="text-align:left;">Name</div>
+                        <div class="col-md-5 data2">ORI 00:00 &#9992 DES 00:00</div>
+                    </div>
+-->
+                </div>
+            </div>
+            <div class="col-md-6" style="text-align:center;">
+                <div id="map"></div>
+        </div>
+        </div>
+    </div>
+</body>
+</html>

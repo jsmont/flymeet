@@ -1,0 +1,19 @@
+{
+    "name": "flymeet",
+    "preferGlobal": true,
+    "version": "0.0.1",
+    "author": "J Sola <jsmont.sol@gmail.com>",
+    "description": "Stuff",
+    "license": "MIT",
+    "engines": {
+        "node": ">=0.10"
+    },
+    "scripts": {
+        "start": "node ./app.js"
+    },
+    "dependencies": {
+        "express": "~4.13.1",
+        "body-parser":"*",
+        "mongodb":"*"
+    }
+}
